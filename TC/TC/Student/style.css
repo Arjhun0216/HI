@@ -1,0 +1,536 @@
+* {
+    margin: 0 auto;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+   /* background-image:url(data:image/jpeg;base64,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);
+    background-repeat:no-repeat;
+    background-size: cover;*/
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #333;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+section.section-padding {
+    padding: 80px 0;
+}
+.header-area {
+    width: 100%;
+    height: 200px; 
+    background-color: #01427a !important;
+    background-image: url('gceb.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+   
+   /* Cover the entire header */
+    background-repeat: no-repeat; /* No repeating */
+    background-position: center; /* Center the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.header-are {
+    background-color: #563D7C;
+    padding: 130px;
+}
+
+.header-absoulate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    background: none;
+    color: #563D7C;
+    margin-bottom: 30px;
+    margin-top: 6px;
+}
+
+.logo a i.fa.fa-home {
+    color: #563D7C;
+    font-size: 30px;
+    margin-right: 6px;
+}
+
+.logo span {
+    display: inline-block;
+    color: #563D7C;
+    margin-left: 10px;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+/*.main-menu ul {
+    padding:0;
+    margin: 0;
+    list-style: none;
+}
+
+.main-menu ul li {
+    display: block;
+}
+
+.main-menu ul li a {
+    display:block;
+    padding: 0 5px;
+    color: #000000;
+    font-weight: 600;
+    transition: .4s;
+    font-size: 20px; /* Adjust the font size as needed 
+
+    
+}
+
+.main-menu ul li a:hover {
+    background: #563D7C;
+    color: #fff;
+}*/
+
+
+
+
+
+/*.main-menu {
+    position: fixed; /* Ensures the sidebar stays in view while scrolling 
+    width: 200px; /* Sidebar width 
+    background-color: #f4f4f4; /* Sidebar background color 
+    top: 28px; /* Adjust vertical position 
+    left: -500px; /* Initially hides the sidebar off-screen 
+    height: calc(100vh - 175px); /* Dynamic height based on viewport height 
+    padding: 40px 0; /* Top and bottom padding 
+    overflow-y: auto; /* Adds scroll if content exceeds the height 
+    transition: left 0.3s ease; /* Smooth transition for sliding in/out 
+}*/
+
+span.social-icon a {
+    color: #563D7C;
+    font-size: 18px;
+    margin: 2px 5px;
+    display: inline-block;
+}
+
+span#na {
+    font-weight: 300;
+}
+
+.slider-bg-1 {
+    background-image: url(assets/img/img_1.jpg);
+}
+
+.slider-bg-2 {
+    background-image: url(assets/img/MECH1.png);
+}
+
+.single-slider-item {
+    background-position: center;
+    background-size: cover;
+    min-height: 400px;
+    width: 100%;
+    display: table;
+    padding-top: 50px;
+    background-color: #333;
+}
+
+.slider-inner {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.slide-text h2 {
+    font-size: 30px;
+    color: #fff;
+    background: #563D7C;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.slide-text p {
+    color: #333;
+    font-size: 23px;
+}
+
+a.boxed-btn {
+    display: inline-block;
+    background: #563D7C;
+    color: #fff;
+    padding: 13px 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border-radius: 12px;
+}
+
+.slider-content .owl-dots div {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.slider-content .owl-dots {
+    position: relative;
+    left: 0;
+    bottom: 28px;
+    margin: 0 auto;
+    width: 1110px;
+    text-align: center;
+}
+
+.slider-content .owl-dots div.active {
+    background: #563D7C;
+}
+
+/*============================
+Form CSS
+==============================*/
+
+.section-title h3 {
+    background: #563D7C;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h3#et {
+    text-transform: inherit;
+}
+
+.section-title .col-md-12 {
+    margin: 0;
+    padding: 0;
+}
+
+form label {
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 0;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form {
+    margin-bottom: 35px;
+    background: white;
+}
+
+form input[type="text"],
+textarea {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #dddd;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.left-side-form {
+    margin-right:-50px;
+}
+
+.right-side-form {
+    margin-left: -50px;
+}
+
+select {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #dddd;
+    text-transform: capitalize;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+input[type="radio"] {
+    margin: 0 8px;
+    margin-bottom: 70px;
+}
+
+input[type="submit"] {
+    background: #563D7C;
+    border: none;
+    color: #fff;
+    padding: 10px 50px;
+    border-radius: 10px;
+    outline: none;
+}
+
+h5 span.error,
+span.error {
+    font-size: 16px;
+    color: #BE4B49;
+    margin-left: 5%;
+}
+
+.errorMessage {
+    display: block;
+    color: #BE4B49;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.successMessage {
+    display: block;
+    color: #00770D;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.bold-label {
+    font-weight: bold;
+}
+
+
+/*=================================
+View page CSS
+====================================*/
+
+table {
+    /*	background-color: #f8f8f8;*/
+    color: #333;
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #563D7C;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #dddd;
+}
+
+td {
+    border: 1px solid #dddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.action-e {
+    display: block;
+    background: #00770D;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.action-d {
+    display: block;
+    background: #BE4B49;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.action-e:hover,
+.action-d:hover {
+    color: #fff;
+}
+
+.action-d i.fa,
+a.action-e i.fa {
+    display: block;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+
+/*===============================
+Footer CSS
+=================================*/
+footer {
+    background-color: #CFCBCA;
+    padding: 50px 0;
+}
+
+.widget p {
+    color: #333;
+    margin-right: 20px;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+footer h3 {
+    color: #563D7C;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-menu li {
+    display: block;
+}
+
+.footer-menu ul li a {
+    color: #333;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.copy-right {
+    border-top: 1px solid #999;
+    width: 100%;
+    text-align: center;
+    padding-top: 6px;
+    margin-top: 15px;
+    color: #555;
+}
+
+.content-area {
+    padding-bottom: 30px;
+}
+
+div#padding {
+    padding: 0 60px;
+}
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size:medium;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive CSS */
+
+/* Large screens (desktops, laptops) */
+@media (min-width: 1025px) and (min-width: 2160px) {
+    .main-menu ul li {
+        margin-right: 15px;
+      
+    }
+    
+    .header-area {
+        height: 300px;
+    }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-menu ul li {
+        margin-bottom: 0;
+        padding: 0 5px;
+        
+    }
+
+    .header-area {
+        height: 250px;
+    }
+
+    .single-slider-item {
+        min-height: 350px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+    body {
+        font-size: 12px;
+    }
+
+    .header-area {
+        height: 150px;
+        background-size: contain;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .main-menu ul li {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .section-padding {
+        padding: 50px 0;
+    }
+
+    form input[type="text"], textarea {
+        width: 95%;
+        font-size: 16px;
+    }
+
+    .slider-content .owl-dots {
+        width: auto;
+    }
+
+    footer h3 {
+        font-size: 20px;
+    }
+
+    .copy-right {
+        font-size: 12px;
+    }
+
+    .sidebar nav ul {
+        padding: 10px 0; /* Add some padding to the sidebar */
+    }
+}
+
+/*===============================
+side bar
+=================================*/
+
